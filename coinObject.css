@@ -5,3 +5,8 @@
 .tails{
     background-image: url('/goYenBack.png');
 }
+
+#displayImage{
+    display: flex;
+    flex-direction: row;
+}

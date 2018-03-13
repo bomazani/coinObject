@@ -41,19 +41,20 @@ var coin = {
     }
 
 }
-
+var tossResult = "Result:";
 for (let i = 0; i<20; i++) {
 coin.flip();
 
 var tossResultString = coin.toString();
-var resultString = document.createElement("div");
-var tossResult = document.createTextNode("Result: " + tossResultString + ", ");
-resultString.appendChild(tossResult);
-document.getElementById("displayString").appendChild(resultString);
+tossResult = tossResult + tossResultString + " ";
+
 
 var tossResultImage = coin.toHTML();
-var resultImage = document.createElement("div");
-resultImage.appendChild(tossResultImage);
-document.getElementById("displayString").appendChild(resultImage);
+console.log(tossResultImage);
+document.getElementById("displayImage").appendChild(tossResultImage);
 
 }
+
+var resultString = document.createElement("div");
+resultString.textContent=tossResult;
+document.getElementById("displayString").appendChild(resultString);
