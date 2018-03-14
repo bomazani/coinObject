@@ -1,12 +1,52 @@
-.heads{
-    background-image: url('/goYenFront.png');
-}
 
-.tails{
-    background-image: url('/goYenBack.png');
+
+#background{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/sakura.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 990px;
+    width: 100%;
 }
 
 #displayImage{
+    background-color: white;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    border: solid rgb(248, 170, 235) 10px;
+    height: 40%;
+    width: 49%;
+}
+
+#displayString{
+    background-color: rgb(248, 170, 235);
+    display: flex;
+    text-align: center;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: stretch;
+    border: solid rgb(248, 170, 235) 10px;
+    height: 10%;
+    width: 49%;   
+}
+
+.button {
+    /* background-color: rgb(241, 111, 235); */
+    background-color: blue;
+    border: solid black 1px;
+    /* color: white; */
+    color: blue;
+    padding: 50px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100px;
 }
