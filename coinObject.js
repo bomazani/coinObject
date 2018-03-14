@@ -43,6 +43,8 @@ let flipYen = function(){
     var userChoice= document.getElementById("userInput").value;
     var displayImageDiv = document.getElementById("displayImage");
     var displayStringDiv = document.getElementById("displayString");
+    var userInputDiv = document.getElementById("userInput");
+
 
     displayImageDiv.innerHTML = " ";
     displayStringDiv.innerHTML = " ";
@@ -64,4 +66,5 @@ let flipYen = function(){
     var resultString = document.createElement("div");
     resultString.textContent=tossResult;
     displayStringDiv.appendChild(resultString);
+    userInputDiv.innerHTML = " ";
 }

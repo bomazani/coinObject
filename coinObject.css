@@ -110,6 +110,7 @@ button:hover {
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
+    align-items: center;
     border: solid rgb(248, 170, 235) 10px;
     height: 40%;
     width: 59%;
