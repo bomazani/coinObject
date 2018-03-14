@@ -1,6 +1,6 @@
 
 
-
+let userChoice= document.getElementById("number").value;
 
 var coin = {
     state: 0,
@@ -38,21 +38,27 @@ var coin = {
     }
 }
 
-
-var tossResult = "Coin toss results: ";
-for (let i = 0; i<20; i++) {
-coin.flip();
-
-
-var tossResultString = coin.aString();
-tossResult = tossResult + tossResultString + ", ";
+let flipYen = function(userChoice){
+    // attempting to clear previous results so they do not accumulate.
+    resultString = "";
+    tossResultImage = 0;
 
 
-var tossResultImage = coin.toHTML();
-console.log(tossResultImage);
-document.getElementById("displayImage").appendChild(tossResultImage);
+    var tossResult = "Coin toss results: ";
+    for (let i = 0; i<userChoice; i++) {
+    coin.flip();
+
+
+    var tossResultString = coin.aString();
+    tossResult = tossResult + tossResultString + ", ";
+
+
+    var tossResultImage = coin.toHTML();
+    console.log(tossResultImage);
+    document.getElementById("displayImage").appendChild(tossResultImage);
+    }
+
+    var resultString = document.createElement("div");
+    resultString.textContent=tossResult;
+    document.getElementById("displayString").appendChild(resultString);
 }
-
-var resultString = document.createElement("div");
-resultString.textContent=tossResult;
-document.getElementById("displayString").appendChild(resultString);
